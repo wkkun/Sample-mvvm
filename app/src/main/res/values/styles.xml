@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2022 NetEase, Inc. All rights reserved.
+  ~ Use of this source code is governed by a MIT license that can be
+  ~ found in the LICENSE file.
+  -->
+
+<resources>
+
+    <style name="RedPacketTypeTabLayout">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="commons_base_style_dialog_transparent" parent="Base.AlertDialog.AppCompat">
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <!--是否浮现在activity之上-->
+        <!--        <item name="android:windowIsFloating">true</item>-->
+        <item name="android:background">#00000000</item> <!-- 设置自定义布局的背景透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
+        <!--模糊-->
+        <!--        <item name="android:backgroundDimEnabled">true</item>-->
+    </style>
+
+    <style name="dialogStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--没有标题-->
+        <item name="windowNoTitle">true</item>
+        <!--背景透明-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <!--dialog的整个屏幕的背景是否有遮障层-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+
+    <style name="AppThemeSlide" parent="BaseAppTheme">
+<!--        <item name="android:windowAnimationStyle">@style/anim_activity</item>-->
+    </style>
+
+    <style name="BaseAppTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:actionBarSize">52dp</item>
+    </style>
+
+
+<!--    <style name="anim_activity" mce_bogus="1" parent="@android:style/Animation.Activity">-->
+<!--        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>-->
+<!--        <item name="android:activityOpenExitAnimation">@anim/act_no_anim</item>-->
+<!--        <item name="android:activityCloseEnterAnimation">@anim/act_no_anim</item>-->
+<!--        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>-->
+<!--    </style>-->
+</resources>

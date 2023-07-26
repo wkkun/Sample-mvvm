@@ -1,0 +1,9 @@
+/build/
+/buildLogic/.gradle/
+/buildLogic/build/
+/buildLogic/convention/build/
+
+/app/.gradle/
+/app/build/
+/.gradle/
+/.idea/

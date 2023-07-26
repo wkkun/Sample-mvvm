@@ -1,0 +1,54 @@
+[versions]
+androidDesugarJdkLibs="1.2.2"
+multidexVersion="2.0.1"
+androidGradlePlugin="8.0.0"
+kotlin="1.8.20"
+ksp="1.8.20-1.0.11"
+startupVersion="1.1.1"
+mmkvVersion="1.2.15"
+coroutinesVersion="1.3.9"
+lifecycleVersion="2.5.1"
+okhttpVersion="4.10.0"
+retrofitVersion="2.9.0"
+glideVersion="4.11.0"
+gsonVersion="2.10.1"
+agentwebVersion="v5.0.6-androidx"
+androidXVersion="1.9.0"
+junit4 = "4.13.2"
+appcompatVersion = "1.6.1"
+androidxCore="1.9.0"
+material="1.5.0"
+
+[libraries]
+# Dependencies of the included build-logic
+android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
+kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
+android-desugarJdkLibs = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "androidDesugarJdkLibs" }
+mmkv = { group = "com.tencent", name = "mmkv", version.ref = "mmkvVersion" }
+startup = { group = "androidx.startup", name = "startup-runtime", version.ref = "startupVersion" }
+coroutinesCore = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutinesVersion" }
+coroutinesAndroid = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutinesVersion" }
+livedataKtx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycleVersion" }
+viewmodelKtx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleVersion" }
+lifecycleKtx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleVersion" }
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gsonVersion" }
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttpVersion" }
+retrofit2 = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofitVersion" }
+retrofit2Gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofitVersion" }
+retrofit2Scalars = { group = "com.squareup.retrofit2", name = "converter-scalars", version.ref = "retrofitVersion" }
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glideVersion" }
+junit4 = { group = "junit", name = "junit", version.ref = "junit4" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompatVersion" }
+androidxCore = { group = "androidx.core", name = "core-ktx", version.ref = "androidxCore" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+[bundles]
+coroutines=["coroutinesCore","coroutinesAndroid"]
+
+
+
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
