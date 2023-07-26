@@ -7,3 +7,6 @@
 /app/build/
 /.gradle/
 /.idea/
+/buildLogic/.gradle/
+/buildLogic/build/
+/buildLogic/convention/build/

@@ -1,9 +1,15 @@
 plugins {
     id("convention.android.library")
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
     namespace = "com.wkkun.base"
+}
+
+kapt {
+    correctErrorTypes = true
 }
 
 dependencies {
@@ -21,6 +27,10 @@ dependencies {
     api(libs.lifecycleKtx)
     api(libs.livedataKtx)
     api(libs.viewmodelKtx)
+
+    //hilt
+    implementation(libs.hilt)
+    kapt(libs.hiltKapt)
 
     api(project(":ScreenSupport"))
 }

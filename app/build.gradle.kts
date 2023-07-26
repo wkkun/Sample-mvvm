@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
+
 plugins {
     id("convention.android.application")
     kotlin("kapt")
@@ -27,24 +29,23 @@ android {
         abortOnError =false
 //        baseline = file("lint-baseline.xml")
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
+//    compileOptions {
+//        sourceCompatibility = JavaVersion.VERSION_1_8
+//        targetCompatibility = JavaVersion.VERSION_1_8
+//    }
 }
 
-// Allow references to generated code
 kapt {
     correctErrorTypes = true
 }
+// Allow references to generated code
 
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar", "*.aar"))))
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation(project(":BaseFunction"))
 
-    implementation("com.google.dagger:hilt-android:2.44")
-    kapt("com.google.dagger:hilt-android-compiler:2.44")
-
+    //hilt
+    implementation(libs.hilt)
+    kapt(libs.hiltKapt)
 }
